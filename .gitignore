@@ -1,0 +1,42 @@
+# --- Environments & secrets ---
+.env
+.env.local
+*.env
+!.env.example
+
+# --- Python ---
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+*.egg-info/
+.Python
+*.db
+*.sqlite3
+
+# --- Node / frontend ---
+node_modules/
+dist/
+build/
+.vite/
+*.log
+npm-debug.log*
+
+# --- ML artifacts & dataset (large, regenerable -- see ml/data/prepare_dataset.py) ---
+ml/data/raw/*.csv
+ml/data/raw/*.rar
+ml/models/*.joblib
+# Keep the metadata + figures (small, useful for reviewers), drop everything else large:
+ml/notebooks/figures/*.png
+
+# --- IDE / OS ---
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# --- Docker ---
+*.pid
+*.tsbuildinfo
